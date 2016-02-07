@@ -14,7 +14,9 @@ public class Solution {
         }
         
         for(int i = 0; i < guess.length(); ++i) {
-            if(digits[gChars[i] - '0']-- > 0) ++b;
+            if(digits[gChars[i] - '0']-- > 0) {
+                ++b;
+            }
         }
         return a + "A" + b + "B";
     }
