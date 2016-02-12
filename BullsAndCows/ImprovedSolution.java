@@ -4,8 +4,9 @@ public class Solution {
         int[] gDigits = new int[10];
         int bulls = 0, cows = 0;
         for(int i = 0; i < secret.length(); ++i) {
-            if(secret.charAt(i) == guess.charAt(i)) ++bulls;
-            else {
+            if(secret.charAt(i) == guess.charAt(i)) {
+                ++bulls;
+            } else {
                 sDigits[secret.charAt(i) - '0']++;
                 gDigits[guess.charAt(i) - '0']++;
             }
