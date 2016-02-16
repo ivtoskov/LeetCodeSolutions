@@ -6,10 +6,11 @@ public class Solution {
             rightMax = height[j];
             maxx = Math.max(maxx, (j - i) * Math.min(leftMax, rightMax));
             
-            if(leftMax < rightMax)
+            if(leftMax < rightMax) {
                 while(i < j && height[i] <= leftMax) ++i;
-            else
+            } else {
                 while(i < j && height[j] <= rightMax) --j;
+			   }
         }
         return maxx;
     }
