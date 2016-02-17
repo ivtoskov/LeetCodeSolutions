@@ -8,7 +8,9 @@ public class Solution {
     }
     
     public int rob(int[] nums, int index, int[] cache) {
-        if(index >= nums.length) return 0;
+        if(index >= nums.length) {
+            return 0;
+        }
         if(cache[index] >= 0) return cache[index];
         int sol1 = rob(nums, index + 1, cache);
         int sol2 = nums[index] + rob(nums, index + 2, cache);
