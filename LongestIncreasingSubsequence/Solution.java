@@ -1,6 +1,8 @@
 public class Solution {
     public int lengthOfLIS(int[] nums) {
-        if(nums == null || nums.length == 0) return 0;
+        if(nums == null || nums.length == 0) {
+            return 0;
+        }
         int n = nums.length, len = 1;
         int[] prev = new int[n];
         prev[0] = nums[0];
