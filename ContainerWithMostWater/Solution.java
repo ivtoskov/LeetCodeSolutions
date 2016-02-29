@@ -7,7 +7,9 @@ public class Solution {
             maxx = Math.max(maxx, (j - i) * Math.min(leftMax, rightMax));
             
             if(leftMax < rightMax) {
-                while(i < j && height[i] <= leftMax) ++i;
+                while(i < j && height[i] <= leftMax) {
+				        ++i;
+                }
             } else {
                 while(i < j && height[j] <= rightMax) --j;
 			   }
