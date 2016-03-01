@@ -1,5 +1,6 @@
 public class Solution {
     private static final String BASE = "()";
+
     public List<String> generateParenthesis(int n) {
         return new ArrayList<>(generateParanthesis(n));
     }
