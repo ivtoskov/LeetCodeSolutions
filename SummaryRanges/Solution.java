@@ -8,8 +8,9 @@ public class Solution {
             ranges.add(nums[start] + ((start != end - 1) ? ("->" + nums[end - 1]) : ""));
             start = end;
         }
-        if(start < nums.length)
+        if(start < nums.length) {
             ranges.add(nums[start] + ((start != nums.length - 1) ? ("->" + nums[nums.length - 1]) : ""));
+        }
         return ranges;
     }
 }
