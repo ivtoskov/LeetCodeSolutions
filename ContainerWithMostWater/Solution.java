@@ -11,7 +11,9 @@ public class Solution {
 				        ++i;
                 }
             } else {
-                while(i < j && height[j] <= rightMax) --j;
+                while(i < j && height[j] <= rightMax) {
+                    --j;
+                }
 			   }
         }
         return maxx;
