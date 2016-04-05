@@ -3,7 +3,9 @@ public class Solution {
         String[] nodes = preorder.split(",");
         int number = 1;
         for(int i = 0; i < nodes.length; ++i) {
-            if(number == 0) return false;
+            if(number == 0) {
+		          return false;
+            }
             
             if("#".equals(nodes[i])) --number;
             else ++number;
