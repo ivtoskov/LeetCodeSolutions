@@ -9,7 +9,9 @@ public class Solution {
             if(!map.containsKey(pattern.charAt(i)) && !map.containsValue(words[i])) {
                 map.put(pattern.charAt(i), words[i]);
             } else {
-                if(!map.containsKey(pattern.charAt(i)) || !map.get(pattern.charAt(i)).equals(words[i])) return false;
+                if(!map.containsKey(pattern.charAt(i)) || !map.get(pattern.charAt(i)).equals(words[i])) {
+                    return false;
+                }
             }
         }
         return true;
