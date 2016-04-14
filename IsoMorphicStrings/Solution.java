@@ -6,7 +6,9 @@ public class Solution {
             char schar = s.charAt(i);
             char tchar = t.charAt(i);
             if(!map.containsKey(schar) && !map.containsValue(tchar)) map.put(schar, tchar);
-            else if(!map.containsKey(schar) || map.get(schar) != tchar) return false;
+            else if(!map.containsKey(schar) || map.get(schar) != tchar) {
+                return false;
+            }
         }
         return true;
     }
