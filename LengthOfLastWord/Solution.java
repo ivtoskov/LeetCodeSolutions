@@ -4,7 +4,9 @@ public class Solution {
         int index = s.length() - 1;
         while(index >= 0 && s.charAt(index) == ' ') --index;
         while(index >= 0) {
-            if(s.charAt(index--) == ' ') break;
+            if(s.charAt(index--) == ' ') {
+                break;
+            }
             ++answer;
         }
         return answer;
