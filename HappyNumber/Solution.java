@@ -1,7 +1,9 @@
 public class Solution {
     public boolean isHappy(int n) {
         while(true) {
-            if(n < 10) break;
+            if(n < 10) {
+			       break;
+            }
             int newn = 0;
             while(n != 0) {
                 int digit = n % 10;
