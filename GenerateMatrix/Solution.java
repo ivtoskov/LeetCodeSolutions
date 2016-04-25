@@ -5,7 +5,9 @@ public class Solution {
         while(upperBound <= lowerBound) {
             for(int i = upperBound, j = leftBound; result[i][j] == 0; ++num) {
                 result[i][j] = num;
-                if(i == upperBound && j < rightBound) ++j;
+                if(i == upperBound && j < rightBound) {
+                    ++j;
+                }
                 else if(i < lowerBound && j == rightBound) ++i;
                 else if(i == lowerBound && j > leftBound) --j;
                 else if(i > upperBound) --i;
