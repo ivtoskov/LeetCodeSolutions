@@ -1,6 +1,8 @@
 public class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        if(root == null) return new ArrayList<>();
+        if(root == null) {
+            return new ArrayList<>();
+        }
         int size = maxDepth(root);
         List<List<Integer>> result = new ArrayList<>(size);
         for(int i = 0; i < size; ++i) {
