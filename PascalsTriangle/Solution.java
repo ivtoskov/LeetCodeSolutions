@@ -11,7 +11,9 @@ public class Solution {
     }
     
     private void generate(List<List<Integer>> prev, int index, int limit) {
-        if(index >= limit) return;
+        if(index >= limit) {
+            return;
+        }
         List<Integer> last = prev.get(prev.size() - 1);
         List<Integer> current = new ArrayList<>();
         current.add(1);
