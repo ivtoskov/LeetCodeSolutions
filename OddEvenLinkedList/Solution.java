@@ -8,7 +8,9 @@
  */
 public class Solution {
     public ListNode oddEvenList(ListNode head) {
-        if(head == null || head.next == null) return head;
+        if(head == null || head.next == null) {
+            return head;
+        }
         
         ListNode odd = head, even = head.next, evenHead = head.next, next = head.next.next;
         while(next != null) {
