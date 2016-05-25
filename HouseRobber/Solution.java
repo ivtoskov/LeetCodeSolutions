@@ -11,7 +11,9 @@ public class Solution {
         if(index >= nums.length) {
             return 0;
         }
-        if(cache[index] >= 0) return cache[index];
+        if(cache[index] >= 0) {
+            return cache[index];
+        }
         int sol1 = rob(nums, index + 1, cache);
         int sol2 = nums[index] + rob(nums, index + 2, cache);
         cache[index] = Math.max(sol1, sol2);
