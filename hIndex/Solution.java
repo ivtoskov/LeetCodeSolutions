@@ -9,7 +9,9 @@ public class Solution {
                 high = mid - 1;
             }
         }
-        while(!check(citations, high)) --high;
+        while(!check(citations, high)) {
+            --high;
+        }
         return high;
     }
     
