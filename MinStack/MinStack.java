@@ -4,8 +4,9 @@ class MinStack {
     public void push(int x) {
         if(head == null) {
             head = new Node(x, x);
-        } else 
+        } else {
             head = new Node(x, Math.min(x, head.min), head);
+        }
     }
 
     public void pop() {
