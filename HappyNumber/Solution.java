@@ -12,6 +12,6 @@ public class Solution {
             }
             n = newn;
         }
-        return n == 1 || n == 7;
+        return (n == 1) || (n == 7);
     }
 }
