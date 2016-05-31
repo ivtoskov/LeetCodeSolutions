@@ -7,8 +7,9 @@ public class Solution {
 		          return false;
             }
             
-            if("#".equals(nodes[i])) --number;
-            else ++number;
+            if("#".equals(nodes[i])) {
+                --number;
+            } else ++number;
         }
         return number == 0;
     }
