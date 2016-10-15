@@ -9,10 +9,12 @@ public class Solution {
         for (int i = n - 1; i >= 0; --i) {
             dp[i] = new ArrayList<>();
             for (int j = i + 1; j < n; ++j) {
-                String current = s.substring(i, j);
-                if (wordDict.contains(current)) {
-                    for (String prev : dp[j]) {
-                        dp[i].add(current + ' ' + prev);
+                if (!dp[j].isEmpty()) {
+                    String current = s.substring(i, j);
+                    if (wordDict.contains(current)) {
+                        for (String prev : dp[j]) {
+                            dp[i].add(current + ' ' + prev);
+                        }
                     }
                 }
             }
@@ -32,8 +34,7 @@ public class Solution {
         
         for (int i = n - 1; i >= 0; --i) {
             for (int j = i + 1; j <= n; ++j) {
-                String current = s.substring(i, j);
-                if (wordDict.contains(current) && dp[j]) {
+                if (dp[j] && wordDict.contains(s.substring(i, j))) {
                     dp[i] = true;
                     break;
                 }
